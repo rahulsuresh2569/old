@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Black Engine</title>
+    <link rel="stylesheet" href="logpg.css">
+
+    <style>
+      l ,*{
+    margin: 0;
+    padding: 0;
+    }
+
+    .title{
+        background-color: #64ECBB;
+        color: black;
+        width: 100%;
+        height: 50px;
+    }
+    p{
+        font-size: medium;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .bold{
+        font-weight: bold;
+    }
+    .be{
+        padding: 6px;
+    }
+
+    .login{
+        background-color: black;
+        color: white;
+        position: relative;
+        width: 450px;
+        height: 500px;
+        border-radius: 10px;
+        text-align: center;
+    }
+    .gc{
+        color: #64ECBB;
+    }
+    .fs{
+        font-size: 30px;
+        font-weight: 200;
+        top: 100px;
+        padding-top: 30px;
+        padding-bottom: 20px;
+
+    }
+    section{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 80px;
+    }
+    .input1{
+        margin-top: 30px;
+        margin-bottom: 60px;
+    }
+    .un{
+        width: 300px;
+        border: none;
+        border-bottom: 1px solid #fff;
+        background: transparent;
+        color: white;
+    }
+    .pw{
+        width: 300px;
+        border: none;
+        border-bottom: 1px solid #fff;
+        background: transparent;
+        color: white;
+    }
+    .inputs{
+        margin-top: 10px;
+        margin-bottom: 50px;
+        padding-top: 20px;
+    }
+    .sign{
+        outline: none;
+        border: none;
+        cursor: pointer;
+        width: 200px;
+        border-radius: 15px;
+        font-size: 1em;
+        font-weight: bold;
+        margin-top: 40px;
+        margin-bottom: 70px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .acc{
+        text-decoration: none;
+        color: white;
+        margin-right: 130px;
+    }
+    .acc:hover{
+        color: blue;
+        cursor: pointer;
+    }
+    .help{
+        text-decoration: none;
+        color: white;
+    }
+    .help:hover{
+        color: blue;
+        cursor: pointer;
+    }
+    </style>
+</head>
+<body style="background-color:  gray;">
+    <div class="title">
+        <div class="be">
+            <p><span class="bold">B</B></span>lack</p>
+            <p><span class="bold">E</span>ngine</p>
+        </div>
+    </div>
+    <section>
+        <div class="login">
+            <p class="fs">Engage<span class="gc">Easy</span></p>
+            <div class="inputs">
+                <div class="input1">
+                    <input class="un" type="username" id="username" placeholder="Username">
+                </div>
+                <div class="input2">
+                    <input class="pw" type="text" id="password" placeholder="Password">
+                </div>
+            </div>
+            <div>
+                <button class="sign" onclick="clicks();">Sign up</button>
+            </div>
+            <div >
+                <a class="acc" href=C:\SE project\acc creation\account.html>Create account</a>
+                <a class="help" href=C:\SE project\help desk\help.html>Need help?</a>
+            </div>
+        </div>
+    </section>
+    <script>
+      function clicks(){
+        var user = document.getElementById('username').value;
+        var pass = document.getElementById('password').value;
+        if (user == 'Govardhan' && pass == '1234'){
+            console.log('hello');
+        }
+        else{
+            alert('wrong User or Passwor')
+        }
+      }
+
+    </script>
+</body>
+</html>
