@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    JavaScript
+  </title>
+
+
+</head>
+
+<body>
+
+  <script>
+    const product = {
+      name : 'baseketball',
+      price : 2095,
+      'delivery-time' : '1 day'
+    };
+    console.log(product);
+    product.price+=500;
+    console.log(product);
+    
+    console.log(product['delivery-time']);
+
+    const product1 = {
+      name:'bat',
+      price:100
+    };
+
+    const product2 ={
+      name:'ball',
+      price:50
+    };
+
+    function isLessExpensive (p1,p2) {
+      if (p1.price<p2.price) {
+        return p1;
+      } else {
+        return p2;
+      }
+    }
+
+    const leastExpensive = isLessExpensive(product1,product2);
+    console.log(leastExpensive);
+
+    function isSameProduct (p1,p2) {
+      if ((p1.name===p2.name)&&(p1.price===p2.price)) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+    console.log (isSameProduct(product1,product2));
+
+  </script>
+
+</body>
+
+</html>
