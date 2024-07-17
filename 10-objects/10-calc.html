@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <title>Calculator</title>
+  </head>
+
+  <body>
+
+    <p>
+      <button onclick="
+        updateCalculation('1');
+      ">
+        1 
+      </button>
+
+      <button onclick="
+        updateCalculation('2');
+      ">
+        2
+      </button>
+
+      <button onclick="
+        updateCalculation('3');
+      ">
+        3
+      </button>      
+    </p>
+    
+    <p>
+      <button onclick="
+        updateCalculation('4');
+      ">
+        4
+      </button>
+
+      <button onclick="
+        updateCalculation('5');
+      ">
+        5
+      </button>
+
+      <button onclick="
+        updateCalculation('6');
+      ">
+        6
+      </button>      
+    </p>
+
+    <p>
+      <button onclick="
+        updateCalculation('7');
+      ">
+        7
+      </button>
+
+      <button onclick="
+        updateCalculation('8');
+      ">
+        8
+      </button>
+
+      <button onclick="
+        updateCalculation('9');
+      ">
+        9
+      </button>      
+    </p>
+
+    <button onclick="
+      updateCalculation('+');
+      ">
+      +
+    </button>
+
+    <button onclick="
+      calculation=eval(calculation);
+      console.log(calculation);
+      updateData(calculation);
+    ">
+      =
+    </button>
+
+    <button onclick="
+      calculation=''
+      console.log(calculation);
+      updateData(calculation);
+    ">
+      Clear
+    </button>
+
+    <script>
+      let calculation;
+      let calLoad = localStorage.getItem('calSave');  
+      if (calLoad===null) {
+        calculation='';
+        console.log(calculation);
+      } else {
+        calculation=calLoad;
+        console.log(calculation);
+      }
+
+      function updateCalculation(num) {
+        calculation+=num;
+        console.log(calculation);
+      }
+
+      function updateData(calculation) {
+        calLoad = localStorage.setItem('calSave',calculation)
+      } 
+
+    </script>
+    
+  </body>
+
+
+  
+</html>
