@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Obj Prac</title>
+  </head>
+  
+  <body>
+
+    <script>
+
+      const product = {
+        name : 'basketball',
+        price : 2095
+      };
+      console.log(product);
+      
+      product.price=product.price+500;
+      console.log(product);
+      
+      const product3 = {
+        name : 'basketball',
+        price : 2095,
+        'delivery-time' : '3 days'
+      };
+      console.log(product3['delivery-time']);
+
+      const product2 = {
+        name : 'bat',
+        price : 5000
+      };
+      function comparePrice (p1,p2) {
+        if (p1.price > p2.price) {
+          console.log(p1.price);
+        } else {
+          console.log(p2.price);
+        }
+      }
+      comparePrice(product,product2);
+
+      const product4 = {
+        name : 'shoe',
+        price : 50
+      };
+      const product5 = {
+        name : 'shoe',
+        price : 50
+      };
+      function isSameProduct(p1,p2) {
+        if (p1.name===p2.name && p2.price===p2.price) {
+          console.log(true);
+        } else {
+          console.log(false);
+        }
+      }
+      isSameProduct(product4,product5);
+
+      console.log('Good Morning'.toLowerCase());
+
+      console.log('test'.repeat(2));
+    </script>
+
+
+  </body>
+</html>
