@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Simple Cal</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background-color: rgb(232, 249, 255);
+        padding: 0;
+        margin: 0;
+      }
+
+      div {
+        margin-bottom: 10px;
+      }
+      
+      button {
+        padding: 20px;
+        font-size: 15px;
+      }
+      .main-div {
+        display: flex;
+        flex-direction: row;
+      }
+      .numbers-div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .operations-div {
+        display: flex;
+        flex-direction: column;
+      }
+      .operations-div button {
+        margin-left: 20px;
+        margin-bottom: 5px;
+        padding: 10px;
+      }
+      p {
+        font-size: 20px;
+      }
+      </style>
+  </head>
+  
+  <body>
+    <p class="js-output"></p>
+   
+    <div class="main-div">
+      
+      <div class="numbers-div">
+        <div>
+          <button onclick="
+            calculate('7')
+            clearNextNum=false;
+            ">7</button>
+          <button onclick="
+          calculate('8')
+          clearNextNum=false;
+          ">8</button>
+          <button onclick="
+          calculate('9')
+          clearNextNum=false;
+          ">9</button>
+        </div>
+        <div>
+          <button onclick="
+            calculate('4')
+            clearNextNum=false;
+            ">4</button>
+          <button onclick="calculate('5')
+          clearNextNum=false;
+          ">5</button>
+          <button onclick="
+          calculate('6')
+          clearNextNum=false;
+          ">6</button>
+        </div>
+        
+        <div>
+          <button onclick="
+            calculate('1')
+            clearNextNum=false;
+          ">1</button>
+          <button onclick="
+          calculate('2')
+          clearNextNum=false;
+          ">2</button>
+          <button onclick="
+          calculate('3')
+          clearNextNum=false;
+          ">3</button>
+        </div>
+        
+        
+        <div>
+          <button onclick="
+            calculate('0')
+            clearNextNum=false;
+            ">0</button>
+        </div>
+      </div>
+      
+      <div class="operations-div">
+        <button onclick="
+          clearNextNum=false;
+          calculate('+')
+        ">
+          +
+        </button>
+        
+        <button onclick="
+          clearNextNum=false;
+          calculate('-')
+        ">
+          -
+        </button>
+       
+        <button onclick="
+          clearNextNum=false;
+          calculate('*')
+        ">
+          *
+        </button>
+
+        <button onclick="
+          clearNextNum=false;
+          calculate('/')
+        ">
+          /
+        </button>
+        
+        <button onclick="
+          sum='0'
+          localStorage.removeItem('sum');
+          showOutput(sum)
+          clearNextNum=true;
+      ">
+        Reset
+        </button>
+
+        <button onclick="
+          sum = eval(sum)
+          updateSum(sum)
+          clearNextNum=true;
+        ">
+          =
+        </button>
+
+            
+      </div>
+    </div>
+
+    <script>
+      let sum ;
+      let clearNextNum=true;
+      if (sum === null) {
+        sum='';
+      } else {
+        sum = localStorage.getItem('sum')
+      }
+      showOutput(sum)
+      
+
+
+       function calculate(elem) {
+        if (!clearNextNum) {
+          sum += elem
+          
+          showOutput(sum)  
+        } else {
+          sum=elem;
+          
+          showOutput(sum)  
+        }
+      }
+      
+      function updateSum(sum) {
+        
+        showOutput(sum)
+        localStorage.setItem('sum',sum);
+      }
+
+      function showOutput(sum) {
+        document.querySelector('.js-output')
+          .innerHTML = sum;
+      }
+
+    </script>
+  
+  </body>
+
+</html>
