@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PRAC</title>
+  </head>
+
+  <body>
+    <button>9a</button>
+    <button class="js-9b">9b</button>
+    
+    <br><br><br>
+
+    <button class="js-heads" onclick="
+      document.querySelector('.js-choice').innerHTML = 'You chose: heads';
+    ">Heads
+    </button>
+    <button class="js-tails" onclick="
+      document.querySelector('.js-choice').innerHTML = 'You chose: tails';
+    ">Tails
+    </button>
+    <p class="js-choice"></p>
+    
+    <br><br>
+
+    <input type="text" class="js-name" placeholder="Name" onkeydown="checkEnterKey(event)">
+    <button class="submit-button" onclick="showName()">Submit</button>
+    <p class="js-output"></p>
+    
+    <br><br>
+    <input type="text" class="js-live-text" placeholder="Type something" onkeyup="showLive()">
+    <p class="js-live-output"></p>
+    
+    <script>
+      console.log (document.querySelector('button'));
+      document.querySelector('.js-9b').innerHTML = '9b done!';
+      
+      function checkEnterKey (event) {
+        if (event.key === 'Enter') {
+          showName();
+        }
+      }
+
+      function showName() {
+        let nameTextElement = document.querySelector('.js-name').value;
+        document.querySelector('.js-output').innerHTML = `Your Name is: ${nameTextElement}`
+      }
+
+      function showLive() {
+        let inputElement = document.querySelector('.js-live-text').value;
+        console.log(inputElement);
+        document.querySelector('.js-live-output').innerHTML = `${inputElement}`;
+      }
+    </script>
+  </body>
+</html>
