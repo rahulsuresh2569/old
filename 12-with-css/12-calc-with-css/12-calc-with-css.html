@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Simple Cal</title>
+    <link rel="stylesheet" href="12-calc-with-css.css">
+  </head>
+  
+  <body>
+    
+      
+      <div class="numbers-div">
+        <p class="js-output"></p>
+        <div>
+          <button onclick="
+            calculate('1')
+            clearNextNum=false;
+          ">1</button>
+          <button onclick="
+          calculate('2')
+          clearNextNum=false;
+          ">2</button>
+          <button onclick="
+          calculate('3')
+          clearNextNum=false;
+          ">3</button>
+
+          <button class="operator-button" onclick="
+          clearNextNum=false;
+          calculate(' + ')
+        ">
+          +
+        </button>
+        </div>
+
+        <div>
+          <button onclick="
+            calculate('4')
+            clearNextNum=false;
+            ">4</button>
+          <button onclick="calculate('5')
+          clearNextNum=false;
+          ">5</button>
+          <button onclick="
+          calculate('6')
+          clearNextNum=false;
+          ">6</button>
+
+          <button class="operator-button" onclick="
+          clearNextNum=false;
+          calculate(' - ')
+        ">
+          -
+        </button>
+        </div>
+
+        <div>
+
+          <button onclick="
+            calculate('7')
+            clearNextNum=false;
+            ">7</button>
+
+          <button onclick="
+          calculate('8')
+          clearNextNum=false;
+          ">8</button>
+
+          <button onclick="
+          calculate('9')
+          clearNextNum=false;
+          ">9</button>
+
+          <button class="operator-button" onclick="
+          clearNextNum=false;
+          calculate(' * ')
+        ">
+          *
+        </button>
+        </div>
+
+        
+        
+        
+        
+        
+        <div>
+          <button onclick="
+            calculate('0')
+            clearNextNum=false;
+            ">0</button>
+          
+          <button onclick="
+            calculate('.')
+            clearNextNum=false;
+            ">.</button>
+
+          <button onclick="
+          sum = eval(sum)
+          updateSum(sum)
+          clearNextNum=true;
+        ">
+          =
+        </button>
+        
+        <button class="operator-button" onclick="
+          clearNextNum=false
+          calculate(' / ')
+        ">
+          /
+        </button>
+        
+        </div>
+
+        <button class="clear-button" onclick="
+        sum='0'
+        localStorage.removeItem('sum');
+        showOutput(sum)
+        clearNextNum=true;
+      ">
+        Clear
+        </button>
+        
+
+      
+      
+  
+    </div>
+
+    <script src="12-calc-with-css.js"></script>
+  
+  </body>
+
+</html>
