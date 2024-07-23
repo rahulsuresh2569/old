@@ -1,0 +1,49 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.subscribe-button {
+  border: none;
+  padding: 10px 15px;
+  background-color: black;
+  color: white;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.subscribed-button {
+  color: black;
+  background-color: rgb(241, 241, 241);
+}
+
+.gaming-button {
+  border: none;
+  color: black;
+  padding: 10px 8px;
+  border-radius: 5px;
+  margin-top: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-right: 6px;
+}
+
+.is-toggled {
+  color: white;
+  background-color: black;
+}
+
+.cost-input {
+  padding: 8px;
+}
+
+.cost-submit {
+  padding: 10px 12px;
+  border: none;
+  background-color: green;
+  color: white;
+  cursor: pointer;
+}
+.error-message {
+  color: red;
+}
