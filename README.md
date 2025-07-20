@@ -16,4 +16,4 @@ Here you'll find a collection of files and small projects, each corresponding to
 
 After completing this course, I took on a bigger challenge to apply my new-found skills. I recreated a functional Amazon e-commerce website clone from scratch!
 
-🚀 **Check out my Amazon Clone project here:** [Link to your awesome Amazon project repository] 
+**Check out my Amazon Clone project here:** [Javascript Amazon Clone](https://github.com/rahulsuresh2569/javascript-amazon-clone) 
